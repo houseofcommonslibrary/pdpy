@@ -92,7 +92,7 @@ Some MP functions have an optional argument called `while_mp`, which filters the
 
 ---
 
-_pdpy.__fetch_mps__(_from_date=None_, _to_date=None_, _on_date = NA_)
+_pdpy_.__fetch_mps__(_from_date=None_, _to_date=None_, _on_date = NA_)
 
 Fetch a dataframe of key details about each MP, with one row per MP.
 
