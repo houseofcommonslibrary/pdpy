@@ -1,6 +1,8 @@
 # Directories
 __pycache__
+dist
 docs
+pdpy.egg-info
 
 # Files
 .DS_Store
