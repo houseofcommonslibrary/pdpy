@@ -132,7 +132,7 @@ Fetch a dataframe of opposition roles for each MP, with one row per opposition r
 
 ---
 
-_pdpy_.__fetch_mps_commitee_memberships__(_from_date=None_, _to_date=None_, _on_date = NA_, _while_mp=True_)
+_pdpy_.__fetch_mps_committee_memberships__(_from_date=None_, _to_date=None_, _on_date = NA_, _while_mp=True_)
 
 Fetch a dataframe of  Parliamentary committee memberships for each MP, with one row per committee membership.
 
@@ -182,6 +182,6 @@ Fetch a dataframe of opposition roles for each Lord, with one row per opposition
 
 ---
 
-_pdpy_.__fetch_lords_commitee_memberships__(_from_date=None_, _to_date=None_, _on_date = NA_, _while_lord=True_)
+_pdpy_.__fetch_lords_committee_memberships__(_from_date=None_, _to_date=None_, _on_date = NA_, _while_lord=True_)
 
 Fetch a dataframe of Parliamentary committee memberships for each Lord, with one row per committee membership.
