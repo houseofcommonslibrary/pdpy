@@ -25,7 +25,7 @@ pip install pdpy
 
 There are certain conventions that apply across the package.
 
-Functions that makes calls to the data platform (or to other online resources) are prefixed `fetch_*`, while those that retrieve or generate data locally are prefixed `get_*`.
+Functions that make calls to the data platform (or to other online resources) are prefixed `fetch_*`, while those that retrieve or generate data locally are prefixed `get_*`.
 
 Column names used in dataframes returned by higher level functions reflect the terms used for those data items in the UK Parliament RDF vocabulary, but modified so that the `camelCase` of RDF is replaced with the `lowercase_and_underscores` used in Python. This means that column names can sometimes be long, but I think maintaining a transparent relationship between the data returned by the package and the data stored in the platform makes both the package and platform more useful.
 
