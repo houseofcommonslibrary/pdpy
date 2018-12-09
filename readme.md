@@ -89,13 +89,17 @@ The filtering performed using these arguments is inclusive: a row is returned if
 
 Some MP functions have an optional argument called `while_mp`, which filters the data to include only those rows that coincide with the period when the individual was serving in the House of Commons. This is sometimes necessary because someone who serves in the House of Commons may later serve in the House of Lords and may hold government roles or committee memberships while serving in both Houses. When this argument is set to _False_ these functions will return all relevant records for each individual, even if the records themselves relate to periods when the individual was not an MP.
 
-_pdpy_.__fetch_mps__(_from_date=None_, _to_date=None_, _on_date = NA_)
+---
+
+_pdpy.__fetch_mps__(_from_date=None_, _to_date=None_, _on_date = NA_)
 
 Fetch a dataframe of key details about each MP, with one row per MP.
 
 This dataframe contains summary details for each MP, such as names, gender, and dates of birth and death.
 
 The `from_date`, `to_date` and `on_date` arguments can be used to filter the MPs returned based on the dates of their Commons memberships. Note that in this particular case the filtering does not rely on dates shown in the dataframe but uses Commons membership records to calculate whether an MP was serving on the dates in question. While breaks in service are therefore accounted for, this function does not yet have an option to exclude serving Members who were prevented from sitting at a given point in time for some reason.
+
+---
 
 _pdpy_.__fetch_commons_memberships__(_from_date=None_, _to_date=None_, _on_date = NA_)
 
