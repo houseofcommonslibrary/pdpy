@@ -86,7 +86,7 @@ def sparql_select(query):
         for header in headers:
             if header in record:
                 if 'datatype' in record[header] and \
-                    record[header]['datatype'] == constants.XML_DATE:
+                        record[header]['datatype'] == constants.XML_DATE:
 
                     row.append(
                         datetime.datetime.strptime(
@@ -97,4 +97,4 @@ def sparql_select(query):
                 row.append(None)
         rows.append(row)
 
-    return pd.DataFrame(data=rows, columns=headers).fillna(value=np.nan)
+    return pd.DataFrame(data=rows, columns=headers).fillna(value=np.NaN)

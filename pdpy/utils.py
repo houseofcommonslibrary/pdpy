@@ -35,6 +35,7 @@ def convert_date_series(date_str_series):
         else datetime.datetime.strptime(d, '%Y-%m-%d').date() \
         for d in date_str_series]
 
+
 def min_date_nan(dates):
 
     """Find the earliest date from a series that may contain NaNs.
