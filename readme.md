@@ -8,11 +8,11 @@ The UK Parliament's data platform contains data on Parliamentary activity. It un
 
 This package provides access to data stored in the data platform through two interfaces at different levels:
 
-* A low-level interface that takes takes a SPARQL SELECT query, sends it to the platform, and returns the result as a [pandas](http://pandas.pydata.org) _DataFrame_, with data types appropriately converted.
+* A low level interface that takes takes a SPARQL SELECT query, sends it to the platform, and returns the result as a [pandas](http://pandas.pydata.org) _DataFrame_, with data types appropriately converted.
 
-* A high-level interface comprising families of functions for downloading specific datasets, whose contents can be customised through function arguments. In some cases these higher level functions can additionally process the data to make it more suitable for analysis.
+* A high level interface comprising families of functions for downloading specific datasets, whose contents can be customised through function arguments. In some cases these higher level functions can additionally process the data to make it more suitable for analysis.
 
-The higher-level interface currently focuses on providing key data about Members of both Houses of Parliament, but you can use the lower level interface to send custom queries of your own for other data.
+The higher level interface currently focuses on providing key data about Members of both Houses of Parliament, but you can use the lower level interface to send custom queries of your own for other data.
 
 ### Installation
 
@@ -27,9 +27,9 @@ There are certain conventions that apply across the package.
 
 Functions that makes calls to the data platform (or to other online resources) are prefixed `fetch_*`, while those that retrieve or generate data locally are prefixed `get_*`.
 
-Column names used in dataframes returned by higher-level functions reflect the terms used for those data items in the UK Parliament RDF vocabulary, but modified so that the `camelCase` of RDF is replaced with the `lowercase_and_underscores` used in Python. This means that column names can sometimes be long, but I think maintaining a transparent relationship between the data returned by the package and the data stored in the platform makes both the package and platform more useful.
+Column names used in dataframes returned by higher level functions reflect the terms used for those data items in the UK Parliament RDF vocabulary, but modified so that the `camelCase` of RDF is replaced with the `lowercase_and_underscores` used in Python. This means that column names can sometimes be long, but I think maintaining a transparent relationship between the data returned by the package and the data stored in the platform makes both the package and platform more useful.
 
-Higher-level functions always return columns containing the ids of the entities represented in the data to help with grouping, summarising, and linking between datasets. This can make the dataframes harder to browse in an interactive shell. To make this easier, the package has a function called `readable` that returns a copy of the dataframe with any id columns removed.
+Higher level functions always return columns containing the ids of the entities represented in the data to help with grouping, summarising, and linking between datasets. This can make the dataframes harder to browse in an interactive shell. To make this easier, the package has a function called `readable` that returns a copy of the dataframe with any id columns removed.
 
 ``` python
 import pdpy
@@ -56,7 +56,7 @@ I welcome any feedback, bug reports, and suggestions for improvement. Please tal
 
 __sparql_select__(_query_)
 
-The low-level query API consists of a single function which takes a SPARQL SELECT query, sends it to the data platform, and returns the results as a pandas _DataFrame_.
+The low level query API consists of a single function which takes a SPARQL SELECT query, sends it to the data platform, and returns the results as a pandas _DataFrame_.
 
 ```python
 query = """
