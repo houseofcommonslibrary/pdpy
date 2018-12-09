@@ -89,7 +89,7 @@ The filtering performed using these arguments is inclusive: a row is returned if
 
 Some MP functions have an optional argument called `while_mp`, which filters the data to include only those rows that coincide with the period when the individual was serving in the House of Commons. This is sometimes necessary because someone who serves in the House of Commons may later serve in the House of Lords and may hold government roles or committee memberships while serving in both Houses. When this argument is set to _False_ these functions will return all relevant records for each individual, even if the records themselves relate to periods when the individual was not an MP.
 
-pdpy.__fetch_mps__(_from_date=None_, _to_date=None_, _on_date = NA_)
+_pdpy_.__fetch_mps__(_from_date=None_, _to_date=None_, _on_date = NA_)
 
 Fetch a dataframe of key details about each MP, with one row per MP.
 
@@ -97,13 +97,13 @@ This dataframe contains summary details for each MP, such as names, gender, and 
 
 The `from_date`, `to_date` and `on_date` arguments can be used to filter the MPs returned based on the dates of their Commons memberships. Note that in this particular case the filtering does not rely on dates shown in the dataframe but uses Commons membership records to calculate whether an MP was serving on the dates in question. While breaks in service are therefore accounted for, this function does not yet have an option to exclude serving Members who were prevented from sitting at a given point in time for some reason.
 
-pdpy.__fetch_commons_memberships__(_from_date=None_, _to_date=None_, _on_date = NA_)
+_pdpy_.__fetch_commons_memberships__(_from_date=None_, _to_date=None_, _on_date = NA_)
 
 Fetch a dataframe of Commons memberships for each MP, with one row per Commons membership.
 
 The memberships dates are processed to impose consistent rules on the start and end dates for memberships. Specifically, Commons memberships are taken to end at the dissolution of each Parliament, rather than on the date of the general election at which an MP was defeated.
 
-pdpy.__fetch_mps_party_memberships__(_from_date=None_, _to_date=None_, _on_date = NA_, _while_mp=True_, _collapse=False_)
+_pdpy_.__fetch_mps_party_memberships__(_from_date=None_, _to_date=None_, _on_date = NA_, _while_mp=True_, _collapse=False_)
 
 Fetch a dataframe of party memberships for each MP, with one row per party membership.
 
@@ -111,15 +111,15 @@ The `collapse` argument determines whether to collapse consecutive memberships w
 
 Note that party memberships are not necessarily closed when an individual stops being an MP.
 
-pdpy.__fetch_mps_government_roles__(_from_date=None_, _to_date=None_, _on_date = NA_, _while_mp=True_)
+_pdpy_.__fetch_mps_government_roles__(_from_date=None_, _to_date=None_, _on_date = NA_, _while_mp=True_)
 
 Fetch a dataframe of government roles for each MP, with one row per government role.
 
-pdpy.__fetch_mps_opposition_roles__(_from_date=None_, _to_date=None_, _on_date = NA_, _while_mp=True_)
+_pdpy_.__fetch_mps_opposition_roles__(_from_date=None_, _to_date=None_, _on_date = NA_, _while_mp=True_)
 
 Fetch a dataframe of opposition roles for each MP, with one row per opposition role.
 
-pdpy.__fetch_mps_commitee_memberships__(_from_date=None_, _to_date=None_, _on_date = NA_, _while_mp=True_)
+_pdpy_.__fetch_mps_commitee_memberships__(_from_date=None_, _to_date=None_, _on_date = NA_, _while_mp=True_)
 
 Fetch a dataframe of  Parliamentary committee memberships for each MP, with one row per committee membership.
 
@@ -127,7 +127,7 @@ Fetch a dataframe of  Parliamentary committee memberships for each MP, with one 
 
 Some Lords functions have an optional argument called `while_lord`, which filters the rows to include only those records that coincide with the period when the individual was serving in the House of Lords. This is sometimes necessary because someone who serves in the House of Lords may previously have served in the House of Commons and may have held government roles or committee memberships while serving in both Houses. When this argument is set to _False_ these functions will return all relevant records for each individual, even if the records themselves relate to periods when the individual was not a Lord.
 
-pdpy.__fetch_lords__(_from_date=None_, _to_date=None_, _on_date = NA_)
+_pdpy_.__fetch_lords__(_from_date=None_, _to_date=None_, _on_date = NA_)
 
 Fetch a dataframe of key details about each Lord, with one row per Lord.
 
@@ -135,11 +135,11 @@ This dataframe contains summary details for each Lord, such as names, gender, an
 
 The `from_date`, `to_date` and `on_date` arguments can be used to filter the Lords returned based on the dates of their Lords memberships. Note that in this particular case the filtering does not rely on dates shown in the dataframe but uses Lords membership records to calculate whether a Lord was serving on the dates in question. While breaks in service are therefore accounted for, this function does not yet have an option to exclude serving Members who were prevented from sitting at a given point in time for some reason.
 
-pdpy.__fetch_lords_memberships__(_from_date=None_, _to_date=None_, _on_date = NA_)
+_pdpy_.__fetch_lords_memberships__(_from_date=None_, _to_date=None_, _on_date = NA_)
 
 Fetch a dataframe of Commons memberships for each Lord, with one row per Lords membership.
 
-pdpy.__fetch_lords_party_memberships__(_from_date=None_, _to_date=None_, _on_date = NA_, _while_lord=True_, _collapse=False_)
+_pdpy_.__fetch_lords_party_memberships__(_from_date=None_, _to_date=None_, _on_date = NA_, _while_lord=True_, _collapse=False_)
 
 Fetch a dataframe of party memberships for each Lord, with one row per party membership.
 
@@ -147,14 +147,14 @@ The `collapse` argument determines whether to collapse consecutive memberships w
 
 Note that party memberships are not necessarily closed when an individual stops being a Lord.
 
-pdpy.__fetch_lords_government_roles__(_from_date=None_, _to_date=None_, _on_date = NA_, _while_lord=True_)
+_pdpy_.__fetch_lords_government_roles__(_from_date=None_, _to_date=None_, _on_date = NA_, _while_lord=True_)
 
 Fetch a dataframe of government roles for each Lord, with one row per government role.
 
-pdpy.__fetch_lords_opposition_roles__(_from_date=None_, _to_date=None_, _on_date = NA_, _while_lord=True_)
+_pdpy_.__fetch_lords_opposition_roles__(_from_date=None_, _to_date=None_, _on_date = NA_, _while_lord=True_)
 
 Fetch a dataframe of opposition roles for each Lord, with one row per opposition role.
 
-pdpy.__fetch_lords_commitee_memberships__(_from_date=None_, _to_date=None_, _on_date = NA_, _while_lord=True_)
+_pdpy_.__fetch_lords_commitee_memberships__(_from_date=None_, _to_date=None_, _on_date = NA_, _while_lord=True_)
 
 Fetch a dataframe of Parliamentary committee memberships for each Lord, with one row per committee membership.
