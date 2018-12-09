@@ -8,7 +8,7 @@ The UK Parliament's data platform contains data on Parliamentary activity. It un
 
 This package provides access to data stored in the data platform through two interfaces at different levels:
 
-* A low-level interface that takes takes a SPARQL SELECT query, sends it to the platform, and returns the result as a [pandas](http://pandas.pydata.org) DataFrame, with data types appropriately converted.
+* A low-level interface that takes takes a SPARQL SELECT query, sends it to the platform, and returns the result as a [pandas](http://pandas.pydata.org) _DataFrame_, with data types appropriately converted.
 
 * A high-level interface comprising families of functions for downloading specific datasets, whose contents can be customised through function arguments. In some cases these higher level functions can additionally process the data to make it more suitable for analysis.
 
@@ -56,7 +56,7 @@ I welcome any feedback, bug reports, and suggestions for improvement. Please tal
 
 __sparql_select__(_query_)
 
-The low-level query API consists of a single function which takes a SPARQL SELECT query, sends it to the data platform, and returns the results as a pandas DataFrame.
+The low-level query API consists of a single function which takes a SPARQL SELECT query, sends it to the data platform, and returns the results as a pandas _DataFrame_.
 
 ```python
 query = """
