@@ -2,7 +2,7 @@ from setuptools import setup
 setup(
     name = 'pdpy',
     packages = ['pdpy'],
-    version = '0.1.0',
+    version = '0.1.1',
     description = 'A package for downloading data from the Parliamentary Data Platform',
     author = 'Oliver Hawkins',
     author_email = 'oli@olihawkins.com',

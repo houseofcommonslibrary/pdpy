@@ -129,7 +129,7 @@ def combine_party_memberships(pm):
         'party_membership_end_date']]
 
     pm.sort_values(
-        by=['display_name',
+        by=['family_name',
             'party_membership_start_date'],
         inplace=True)
     pm.reset_index(drop=True, inplace=True)
