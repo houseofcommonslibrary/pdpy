@@ -149,13 +149,13 @@ def fetch_mps(from_date=np.NaN,
     # Filter based on membership dates if requested
     if not pd.isna(from_date) or not pd.isna(to_date):
         commons_memberships = fetch_commons_memberships()
-        mathching_memberships = filter.filter_dates(
+        matching_memberships = filter.filter_dates(
             commons_memberships,
             start_col='seat_incumbency_start_date',
             end_col='seat_incumbency_end_date',
             from_date=from_date,
             to_date=to_date)
-        mps = mps[mps['person_id'].isin(mathching_memberships['person_id'])]
+        mps = mps[mps['person_id'].isin(matching_memberships['person_id'])]
 
     # Tidy up and return
     mps.sort_values(
