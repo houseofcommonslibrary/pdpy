@@ -156,7 +156,7 @@ The `from_date`, `to_date` and `on_date` arguments can be used to filter the Lor
 
 _pdpy_.__fetch_lords_memberships__(_from_date=None_, _to_date=None_, _on_date=None_)
 
-Fetch a dataframe of Commons memberships for each Lord, with one row per Lords membership.
+Fetch a dataframe of Lords memberships for each Lord, with one row per Lords membership.
 
 ---
 
