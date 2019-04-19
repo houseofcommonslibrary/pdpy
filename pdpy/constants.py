@@ -1,6 +1,11 @@
 # -*- coding: utf-8 -*-
 """Package constants."""
 
+# Package settings ------------------------------------------------------------
+
+SETTINGS_API_URL = 'api_url'
+SETTINGS_API_URL_DEFAULT = 'https://api.parliament.uk/sparql'
+
 # API settings ----------------------------------------------------------------
 
 API_PAUSE_TIME = 0.5

@@ -27,5 +27,10 @@ from .mps import fetch_mps_government_roles
 from .mps import fetch_mps_opposition_roles
 from .mps import fetch_mps_committee_memberships
 
+from . import settings
+from .settings import get_api_url
+from .settings import set_api_url
+from .settings import reset_api_url
+
 from . import utils
 from .utils import readable

@@ -53,6 +53,8 @@ pm = pm[[
     'party_membership_start_date',
     'party_membership_end_date']]
 
+# Test combine_party_memberships ----------------------------------------------
+
 class CombinePartyMemberships(unittest.TestCase):
 
     """

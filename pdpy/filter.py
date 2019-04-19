@@ -96,12 +96,12 @@ def filter_dates(df,
 
 def handle_date(d):
 
-    """ Take a date which may be a string or a date and returns a date.
+    """Take a date which may be a string or a date and returns a date.
 
-    Takes a date which may be a datetime.date or an ISO 8601 date string,
-    checks it is valid, and returns the date as a datetime.date. NaN values are
-    returned unmodified. This function raises a DateFromatError if it is unable
-    to handle the date.
+    handle_date takes a date which may be a datetime.date or an ISO 8601 date
+    string, checks it is valid, and returns the date as a datetime.date. NaN
+    values are returned unmodified. This function raises a DateFromatError if
+    it is unable to handle the date.
 
     """
 

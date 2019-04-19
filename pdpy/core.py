@@ -11,6 +11,7 @@ import requests
 
 from . import constants
 from . import errors
+from . import settings
 
 # Functions  ------------------------------------------------------------------
 
@@ -35,7 +36,7 @@ def request(query):
 
     """
 
-    url = 'https://api.parliament.uk/sparql'
+    url = settings.get_api_url()
     headers = {}
     headers['content-type'] = 'application/sparql-query'
     headers['accept'] = 'application/sparql-results+json'
