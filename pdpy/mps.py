@@ -220,15 +220,6 @@ def fetch_commons_memberships(from_date=np.NaN,
     # Fetch the Commons memberships
     commons_memberships = fetch_commons_memberships_raw()
 
-    # Filter on dates if requested
-    if not pd.isna(from_date) or not pd.isna(to_date):
-        commons_memberships = filter.filter_dates(
-            commons_memberships,
-            start_col='seat_incumbency_start_date',
-            end_col='seat_incumbency_end_date',
-            from_date=from_date,
-            to_date=to_date)
-
     # Get elections and fix the end dates of memberships
     end_dates = commons_memberships['seat_incumbency_end_date'].values
 
@@ -251,6 +242,15 @@ def fetch_commons_memberships(from_date=np.NaN,
                 continue
 
     commons_memberships['seat_incumbency_end_date'] = end_dates
+
+    # Filter on dates if requested
+    if not pd.isna(from_date) or not pd.isna(to_date):
+        commons_memberships = filter.filter_dates(
+            commons_memberships,
+            start_col='seat_incumbency_start_date',
+            end_col='seat_incumbency_end_date',
+            from_date=from_date,
+            to_date=to_date)
 
     # Tidy up and return
     commons_memberships.sort_values(
