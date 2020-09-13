@@ -1,6 +1,6 @@
 # pdpy
 
-pdpy is a Python package for downloading data from the UK Parliament's data platform. An equivalent package is available for R called [pdpr](https://github.com/olihawkins/pdpr).
+pdpy is a Python package for downloading data from the UK Parliament's data platform. An equivalent package is available for R called [pdpr](https://github.com/houseofcommonslibrary/pdpr).
 
 ## Overview
 
@@ -190,7 +190,7 @@ Fetch a dataframe of Parliamentary committee memberships for each Lord, with one
 
 ## Settings
 
-You can configure the package to use a different data platform API endpoint at runtime. This allows you to run the package against a local version of the data platform. As explained by @matthieubosquet in this [comment](https://github.com/olihawkins/pdpr/issues/1#issuecomment-484026350), the data platform team maintain a docker image of the data platform API which is updated daily with the latest data.
+You can configure the package to use a different data platform API endpoint at runtime. This allows you to run the package against a local version of the data platform. As explained by @matthieubosquet in this [comment](https://github.com/houseofcommonslibrary/pdpr/issues/1#issuecomment-484026350), the data platform team maintain a docker image of the data platform API which is updated daily with the latest data.
 
 You can run a local version of the data platform API with docker using:
 
